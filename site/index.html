@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MR Água Prime | Filtros e tratamento de água de poço</title>
+  <meta name="description" content="Filtros e sistemas de tratamento para água de poço, com instalação e suporte técnico. Atendemos Sergipe, Alagoas, Bahia e Pernambuco.">
+  <link rel="icon" href="/media/logo-mr.png">
+  <link rel="preload" as="image" href="/media/poster-desktop.webp" media="(min-width: 900px)" fetchpriority="high">
+  <link rel="preload" as="image" href="/media/poster-mobile.webp" media="(max-width: 899px)" fetchpriority="high">
+  <script>
+    // Classes que o CSS usa para decidir o que existe, definidas antes da primeira pintura (evita um "salto" ao carregar).
+    //   js      : o JavaScript está ativo
+    //   pinned  : desktop com movimento permitido; hero e Quem somos viram um capítulo fixo guiado pela rolagem
+    //   fx      : movimento permitido; liga os efeitos das seções 3 a 6
+    (function () {
+      var c = document.documentElement.classList;
+      c.add('js');
+      if (matchMedia('(min-width: 900px) and (min-height: 600px) and (prefers-reduced-motion: no-preference)').matches) c.add('pinned');
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches) c.add('fx');
+    })();
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>

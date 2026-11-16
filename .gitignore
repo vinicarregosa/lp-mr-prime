@@ -1,0 +1,32 @@
+# Dependências
+node_modules/
+
+# Build e cache
+dist/
+*.tsbuildinfo
+.vite/
+.cache/
+
+# Variáveis de ambiente e chaves
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Logs
+*.log
+npm-debug.log*
+
+# Arquivos de contexto local (fora do GitHub)
+.claude/
+CLAUDE.md
+CONTEXT.md
+docs/
+
+# Sistema e editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

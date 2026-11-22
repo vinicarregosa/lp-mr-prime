@@ -17,28 +17,28 @@ O `dist/` é estático: qualquer hospedagem estática serve. O servidor precisa 
 ## Estrutura
 
 ```
-index.html            classes js / pinned / fx definidas antes da 1ª pintura
-public/media/         vídeos, posters e fotos (cópia de docs/hero/media)
+index.html            classes js / fx definidas antes da 1ª pintura
+public/media/         hero-casa (.webp e -m.webp), fotos dos filtros (prod-*), instalações (cli-*), vídeos do comparador
 src/
   main.tsx, App.tsx
-  styles.css          o CSS do original, sem alteração de design
-  data/site.ts        WhatsApp, filtros e clientes (textos e medidas informados pelo dono)
-  lib/util.ts         clamp, easing, porQuadro
+  styles.css          paleta azul-marinho + verde-petróleo (variáveis em :root)
+  data/site.ts        WhatsApp, filtros e perguntas frequentes (textos e medidas informados pelo dono)
   components/
-    Bar.tsx           barra, menu recolhido, seção atual
-    Capitulo.tsx      Hero + Quem somos (capítulo fixo no desktop)
-    AntesDepois.tsx   comparador (scrub pela rolagem + arrastar)
-    Filtros.tsx       fila de filtros + detalhe (dialog)
-    Clientes.tsx      cartões com paralaxe
-    Contato.tsx       íris + links
-    Reveal.tsx        FxUp (sobe com fade) e Kinetic (título em palavras)
+    Bar.tsx           barra fixa, menu recolhido, seção atual
+    Hero.tsx          foto da casa com aproximação lenta (CSS), cartão de vidro e destaques
+    Sobre.tsx         quem somos, onde atuamos e cartões
+    Filtros.tsx       cartões dos modelos (sem preço) com CTA para o WhatsApp
+    AntesDepois.tsx   comparador "sem filtro / com filtro" (arrastar + rolagem)
+    Demonstracao.tsx  bloco escuro com fotos reais de instalações
+    Duvidas.tsx       perguntas frequentes (details/summary)
+    Contato.tsx       CTA, links e rodapé
+    Reveal.tsx        FxUp (sobe com fade)
     Icon.tsx          ícones embutidos
-  hooks/useCapitulo.ts  vídeo do hero e rolagem do capítulo
 ```
 
 ## Decisões
 
-- **A rolagem é imperativa de propósito.** Os efeitos escrevem `transform`, `opacity` e variáveis CSS direto no DOM a cada quadro, dentro de `useEffect`, sem estado do React. Estado em cada rolagem re-renderizaria a página inteira.
-- **Só o que muda de conteúdo está em estado:** barra (menu aberto, seção atual) e o detalhe do filtro.
-- **Movimento reduzido:** a classe `fx` não é aplicada e os efeitos das seções 3 a 6 não existem; o capítulo fixo (`pinned`) também não.
-- **Conteúdo:** não inclua preço, "tecnologia americana"/"feito à mão" como selo, números inventados ou falas de clientes sem autorização. Ver `../docs/BRIEF.md`.
+- **Sem preço, sem "tecnologia americana" como selo, sem números ou falas de clientes inventados.** Ver `../docs/BRIEF.md`.
+- **Textos:** citar o dono só como "Mr. Prime"; falar em água de poço (sem "cacimba").
+- **Movimento reduzido:** a classe `fx` não é aplicada; a aproximação do hero e as entradas animadas ficam desligadas.
+- **Comparador:** a rolagem escreve variáveis CSS direto no DOM, sem estado do React, de propósito.

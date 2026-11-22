@@ -1,9 +1,12 @@
 import { AntesDepois } from './components/AntesDepois';
 import { Bar } from './components/Bar';
-import { Capitulo } from './components/Capitulo';
-import { Clientes } from './components/Clientes';
 import { Contato } from './components/Contato';
+import { Diagnostico } from './components/Diagnostico';
+import { Demonstracao } from './components/Demonstracao';
+import { Duvidas } from './components/Duvidas';
 import { Filtros } from './components/Filtros';
+import { Hero } from './components/Hero';
+import { Sobre } from './components/Sobre';
 import { Sprites } from './components/Icon';
 
 export default function App() {
@@ -12,10 +15,13 @@ export default function App() {
       <Sprites />
       <Bar />
       <main>
-        <Capitulo />
-        <AntesDepois />
+        <Hero />
+        <Sobre />
         <Filtros />
-        <Clientes />
+        <AntesDepois />
+        <Demonstracao />
+        <Duvidas />
+        <Diagnostico />
         <Contato />
       </main>
     </>

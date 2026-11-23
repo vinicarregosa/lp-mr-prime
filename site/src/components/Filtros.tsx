@@ -16,7 +16,11 @@ export function Filtros() {
           {FILTROS.map((f, i) => (
             <FxUp as="article" key={f.modelo} className={`pcard${f.destaque ? ' destaque' : ''}`} atraso={i * 80}>
               <header className="pfaixa">{f.faixa}</header>
-              <div className="pfoto" style={{ '--img': `url(${f.imagem})` } as CSSProperties}><img src={f.imagem} alt={`Filtro ${f.modelo}`} loading="lazy" decoding="async" /></div>
+              <div className={`pfoto${f.imagens ? ' multi' : ''}`} style={{ '--img': `url(${f.imagem})` } as CSSProperties}>
+                {(f.imagens ?? [f.imagem]).map((src, k) => (
+                  <img key={src} src={src} alt={`Filtro ${f.modelo}${f.imagens ? `, foto ${k + 1}` : ''}`} loading="lazy" decoding="async" />
+                ))}
+              </div>
               <div className="pcorpo">
                 <h3>{f.titulo}</h3>
                 <p className="pdesc">{f.descricao}</p>
@@ -31,7 +35,7 @@ export function Filtros() {
 
         <FxUp className="fila-cta">
           <p>Não sabe qual modelo escolher?</p>
-          <a className="btn" href={ZAP_ORCAMENTO} target="_blank" rel="noopener">Falar com um especialista <Icon nome="wa" /></a>
+          <a className="btn" href={ZAP_ORCAMENTO} target="_blank" rel="noopener">Falar com o Mister Prime <Icon nome="wa" /></a>
         </FxUp>
       </div>
     </section>

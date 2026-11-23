@@ -5,8 +5,8 @@ import { Icon } from './Icon';
 const LINKS: [string, string][] = [
   ['inicio', 'Início'],
   ['sobre', 'Sobre nós'],
-  ['filtros', 'Filtros'],
   ['antes-depois', 'Sem e com filtro'],
+  ['filtros', 'Filtros'],
   ['instalacao', 'Instalações'],
   ['duvidas', 'Dúvidas'],
   ['contato', 'Contato'],
@@ -44,7 +44,7 @@ export function Bar() {
   useEffect(() => {
     const ac = new AbortController();
     addEventListener('keydown', (e) => { if (e.key === 'Escape') setAberto(false); }, { signal: ac.signal });
-    addEventListener('resize', () => { if (innerWidth >= 1100) setAberto(false); }, { signal: ac.signal });
+    addEventListener('resize', () => { if (innerWidth >= 1280) setAberto(false); }, { signal: ac.signal });
     document.addEventListener('click', (e) => {
       if (barRef.current && !barRef.current.contains(e.target as Node)) setAberto(false);
     }, { signal: ac.signal });
@@ -62,10 +62,10 @@ export function Bar() {
           {LINKS.map(([id, texto]) => (
             <a key={id} href={`#${id}`} aria-current={atual === id ? 'true' : undefined}>{texto}</a>
           ))}
-          <a className="btn menu-cta" href={ZAP_ORCAMENTO} target="_blank" rel="noopener"><Icon nome="fone" /> Fale conosco</a>
+          <a className="btn menu-cta" href={ZAP_ORCAMENTO} target="_blank" rel="noopener"><Icon nome="fone" /> Fale com o Mister Prime</a>
         </nav>
         <div className="bar-acoes">
-          <a className="btn btn-bar" href={ZAP_ORCAMENTO} target="_blank" rel="noopener"><Icon nome="fone" /> Fale conosco</a>
+          <a className="btn btn-bar" href={ZAP_ORCAMENTO} target="_blank" rel="noopener"><Icon nome="fone" /> Fale com o Mister Prime</a>
           <button className="burger" type="button" aria-expanded={aberto} aria-controls="menu" aria-label={aberto ? 'Fechar menu' : 'Abrir menu'} onClick={() => setAberto((o) => !o)}>
             <Icon nome={aberto ? 'x' : 'menu'} />
           </button>

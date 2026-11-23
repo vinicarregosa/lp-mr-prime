@@ -3,10 +3,10 @@ import { Icon, type NomeIcone } from './Icon';
 import { FxUp } from './Reveal';
 
 const ITENS: [NomeIcone, string, string][] = [
-  ['camadas', 'Vasos de fibra de vidro', 'Resistentes, na medida certa para o seu poço'],
-  ['raio', 'Válvula de controle digital', 'Retrolavagem automática e programável'],
+  ['camadas', 'Tanque em PVC reforçado com fibra de vidro', 'Aprovado pelo Inmetro'],
+  ['raio', 'Válvula automática com controle digital', 'Operação automática e programável'],
   ['chave', 'Tubulação e conexões', 'Instalação limpa, feita pela nossa equipe'],
-  ['medidor', 'Mídias filtrantes em camadas', 'Remoção de cor, cheiro, gosto e impurezas'],
+  ['medidor', 'Mídias filtrantes em camadas', 'Remoção de cheiro, cor, sabor e metais pesados'],
 ];
 
 /** Bloco escuro com as fotos reais das instalações (sem inventar números nem depoimentos). */
@@ -18,7 +18,7 @@ export function Demonstracao() {
           <div className="demo-txt">
             <FxUp as="p" className="tag tag-claro">Instalações reais</FxUp>
             <FxUp as="h2" atraso={60}><span id="demo-h">Veja o sistema MR Água Prime em detalhes</span></FxUp>
-            <FxUp as="p" className="lead" atraso={120}>Cada sistema é montado com componentes de alta qualidade e instalado na entrada do seu imóvel.</FxUp>
+            <FxUp as="p" className="lead" atraso={120}>Cada sistema é montado com componentes de alta qualidade e instalado na entrada do seu imóvel, seguindo a Portaria GM/MS nº 888, de 4 de maio de 2021 (Anexo XX), do Ministério da Saúde, para o controle e a vigilância da qualidade da água para consumo humano.</FxUp>
             <ul className="demo-lista">
               {ITENS.map(([ic, t, d]) => (
                 <li key={t}>

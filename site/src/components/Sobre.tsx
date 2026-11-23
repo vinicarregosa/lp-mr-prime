@@ -27,7 +27,7 @@ export function Sobre() {
 
           <div className="onde">
             <h3>Onde atuamos</h3>
-            <p>Tratamos água de poço em Sergipe, Alagoas, Bahia e Pernambuco, com base em Aracaju.</p>
+            <p>Tratamos água de poço em Sergipe, Alagoas, Bahia e Pernambuco, com bases em Aracaju e Maceió.</p>
             <ul className="lugares">
               {LUGARES.map(([ic, t]) => (
                 <li key={t}><Icon nome={ic} /><span>{t}</span></li>

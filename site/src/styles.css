@@ -45,7 +45,7 @@
     .marca b { font-size: 1.12rem; font-weight: 800; letter-spacing: 0.02em; }
     .marca small { margin-top: 4px; font-size: 0.62rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.8; }
     .menu { display: flex; align-items: center; gap: 2px; }
-    .menu a:not(.btn) { padding: 10px 11px; border-radius: 10px; font-size: 0.9rem; font-weight: 500; text-decoration: none; color: rgba(255, 255, 255, 0.9); transition: background-color 140ms var(--ease), color 140ms var(--ease); }
+    .menu a:not(.btn) { white-space: nowrap; padding: 10px 11px; border-radius: 10px; font-size: 0.9rem; font-weight: 500; text-decoration: none; color: rgba(255, 255, 255, 0.9); transition: background-color 140ms var(--ease), color 140ms var(--ease); }
     .menu a[aria-current="true"] { color: var(--mint); }
     .menu .menu-cta { display: none; }
     .bar-acoes { display: flex; align-items: center; gap: 10px; }
@@ -53,7 +53,7 @@
     .burger { display: none; place-items: center; width: 46px; height: 46px; padding: 0; border: 1.5px solid rgba(255, 255, 255, 0.4); border-radius: 12px; background: transparent; color: #fff; cursor: pointer; }
     .burger .i { width: 22px; height: 22px; }
     @media (hover: hover) and (pointer: fine) { .menu a:not(.btn):hover { background: rgba(255, 255, 255, 0.1); } .btn-bar:hover { background: var(--green); } }
-    @media (max-width: 1179px) {
+    @media (max-width: 1279px) {
       .bar-in { gap: 10px; }
       .menu { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: 6px var(--gut) 22px; background: rgba(0, 38, 58, 0.98); border-top: 1px solid rgba(255, 255, 255, 0.12); }
       .bar.open .menu { display: flex; }
@@ -127,14 +127,19 @@
     .cartao p { margin-top: 8px; font-size: 0.9rem; line-height: 1.55; color: var(--soft); }
 
     /* filtros: cartões com faixa colorida */
-    .grade-filtros { margin-top: clamp(32px, 5vh, 52px); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; align-items: stretch; }
+    .grade-filtros { --g: 22px; margin-top: clamp(32px, 5vh, 52px); display: flex; flex-wrap: wrap; justify-content: center; gap: var(--g); align-items: stretch; }
+    .grade-filtros .pcard { flex: 0 0 calc((100% - 2 * var(--g)) / 3); min-width: 0; }
     .pcard { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: #fff; box-shadow: 0 20px 40px -30px rgba(0, 53, 79, 0.55); }
     .pcard.destaque { border-color: var(--green); box-shadow: 0 0 0 1px var(--green), 0 24px 44px -28px rgba(30, 128, 110, 0.7); }
-    .pfaixa { padding: 14px 20px; background: var(--navy); color: #fff; font-family: var(--display); font-size: 0.76rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; }
+    .pfaixa { display: flex; align-items: center; min-height: 66px; padding: 12px 20px; background: var(--navy); color: #fff; font-family: var(--display); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; line-height: 1.35; text-transform: uppercase; }
     .pcard.destaque .pfaixa { background: var(--green); }
+    @media (min-width: 1100px) and (max-width: 1239px) { .pfaixa { min-height: 86px; } }
     .pfoto { position: relative; height: 290px; overflow: hidden; background: #EEF2F4; border-bottom: 1px solid var(--line); }
     .pfoto::before { content: ""; position: absolute; inset: -18%; background: var(--img) center / cover; filter: blur(22px) saturate(1.05); opacity: 0.85; }
     .pfoto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: 50% 100%; }
+    /* mais de uma foto: lado a lado, cada uma numa metade */
+    .pfoto.multi { display: flex; justify-content: center; align-items: flex-end; gap: 8px; padding: 10px 10px 0; }
+    .pfoto.multi img { position: relative; inset: auto; z-index: 1; flex: 0 1 auto; width: auto; max-width: calc(50% - 4px); height: 100%; min-width: 0; }
     .pcorpo { display: flex; flex-direction: column; flex: 1; padding: 22px 20px 22px; }
     .pcorpo h3 { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.02em; }
     .pdesc { margin-top: 8px; font-size: 0.88rem; line-height: 1.5; color: var(--soft); }
@@ -235,7 +240,7 @@
 
     /* ============ RESPONSIVO ============ */
     @media (max-width: 1099px) {
-      .grade-filtros { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .grade-filtros .pcard { flex-basis: calc((100% - var(--g)) / 2); }
     }
     @media (max-width: 899px) {
       .sobre-grid, .duvidas, .demo, .cta, .diag { grid-template-columns: 1fr; }
@@ -247,7 +252,6 @@
     }
     @media (max-width: 639px) {
       .marca small { display: none; }
-      .grade-filtros { grid-template-columns: 1fr; }
       .cartoes { grid-template-columns: 1fr; }
       .demo-fotos { grid-template-columns: 1fr; }
       .demo-fotos figure + figure { border-left: 0; border-top: 1px solid var(--line); }
@@ -299,7 +303,7 @@
       /* filtros: um cartão por linha, foto contida, botão de largura total */
       .grade-filtros { display: grid; grid-template-columns: 1fr; gap: 22px; margin: 30px 0 0; padding: 0; overflow: visible; }
       .pcard { flex: none; }
-      .pfaixa { padding: 14px 20px; font-size: 0.74rem; }
+      .pfaixa { min-height: 0; padding: 14px 20px; font-size: 0.74rem; }
       .pfoto { height: 230px; }
       .pcorpo { padding: 22px 20px 22px; }
       .pcorpo h3 { font-size: 1.4rem; }

@@ -8,7 +8,7 @@ export function Duvidas() {
         <div>
           <FxUp as="p" className="tag">Dúvidas</FxUp>
           <FxUp as="h2" atraso={60}><span id="duvidas-h">Perguntas frequentes</span></FxUp>
-          <FxUp as="p" className="lead" atraso={120}>As dúvidas mais comuns de quem tem poço em casa, no sítio ou na empresa.</FxUp>
+          <FxUp as="p" className="lead" atraso={120}>As dúvidas mais comuns de quem tem poço em residências, condomínios, sítios, fazendas, empresas e indústrias.</FxUp>
         </div>
         <FxUp className="faq" atraso={80}>
           {DUVIDAS.map((d) => (

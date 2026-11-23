@@ -17,8 +17,8 @@ export default function App() {
       <main>
         <Hero />
         <Sobre />
-        <Filtros />
         <AntesDepois />
+        <Filtros />
         <Demonstracao />
         <Duvidas />
         <Diagnostico />

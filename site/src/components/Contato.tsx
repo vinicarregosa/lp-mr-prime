@@ -11,7 +11,7 @@ export function Contato() {
       <div className="wrap">
         <FxUp className="cta">
           <div className="cta-txt">
-            <h2 id="contato-h">Fale com um especialista</h2>
+            <h2 id="contato-h">Fale com o Mister Prime</h2>
             <p className="lead">Solicite um orçamento sem compromisso e fale agora mesmo com a nossa equipe técnica.</p>
             <div className="tel">
               <span className="tel-ic"><Icon nome="fone" /></span>
@@ -23,7 +23,7 @@ export function Contato() {
             </div>
           </div>
           <div className="cta-lado">
-            <p><Icon nome="pino" /> Atendemos Aracaju e região, e também Alagoas, Bahia e Pernambuco.</p>
+            <p><Icon nome="pino" /> Atendemos Sergipe, Alagoas, Bahia e Pernambuco, com bases em Aracaju e Maceió.</p>
             <p><Icon nome="ig" /> Siga-nos {INSTAGRAM_USER}</p>
           </div>
         </FxUp>

@@ -70,7 +70,7 @@ export const DUVIDAS: { q: string; a: string }[] = [
   },
   {
     q: 'Onde o filtro é instalado?',
-    a: 'Na entrada do imóvel. O filtro será instalado após uma avaliação técnica da nossa equipe, que verifica as condições do imóvel e o local de instalação dos equipamentos.',
+    a: 'O filtro será instalado após uma avaliação técnica da nossa equipe, que verifica as condições do imóvel e do local adequado para instalação dos equipamentos.',
   },
   {
     q: 'Vocês fazem a instalação e o suporte técnico?',

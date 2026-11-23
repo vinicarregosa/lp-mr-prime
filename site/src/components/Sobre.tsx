@@ -2,8 +2,8 @@ import { Icon, type NomeIcone } from './Icon';
 import { FxUp } from './Reveal';
 
 const CARTOES: [NomeIcone, string, string][] = [
-  ['gota', 'Água tratada na entrada', 'Filtros centrais que tratam a água do poço antes de chegar às torneiras.'],
-  ['chave', 'Instalação especializada', 'Equipe técnica própria para instalação e manutenção de todos os equipamentos do mercado.'],
+  ['gota', 'Água tratada na entrada', 'Filtros centrais que tratam a água do poço antes de chegar às caixas d\'água e às torneiras.'],
+  ['chave', 'Equipe técnica especializada para instalação', 'Equipe técnica própria para instalação e manutenção de todos os equipamentos do mercado.'],
   ['escudo', 'Suporte técnico', 'Acompanhamento no pós-venda, direto no WhatsApp com o Mister Prime.'],
   ['camadas', 'Filtragem em camadas', 'Mídias filtrantes que ajudam a remover cheiro, cor, sabor e todas as deficiências que a água venha a ter.'],
 ];
@@ -33,7 +33,7 @@ export function Sobre() {
                 <li key={t}><Icon nome={ic} /><span>{t}</span></li>
               ))}
             </ul>
-            <p className="nota"><Icon nome="ondas" /> <span>Além dos filtros, vendemos <b>ionizadores solares para piscina</b> e consertamos <b>máquinas de gelo</b>.</span></p>
+            <p className="nota"><Icon nome="ondas" /> <span>Além dos filtros, vendemos <b>ionizadores solares para piscina</b> e damos <b>manutenção em vários tipos de equipamentos do mercado</b>.</span></p>
           </div>
         </div>
 

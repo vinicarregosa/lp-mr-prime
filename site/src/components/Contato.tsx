@@ -43,6 +43,7 @@ export function Contato() {
             <a href={zap()} target="_blank" rel="noopener">Contato</a>
           </nav>
           <p className="copy">© 2026 MR Água Prime · Aracaju, SE</p>
+          <p className="copy creditos">Site desenvolvido por <a href="https://mavintecnologia.vercel.app" target="_blank" rel="noopener noreferrer">MAVIN</a></p>
         </footer>
       </div>
     </section>

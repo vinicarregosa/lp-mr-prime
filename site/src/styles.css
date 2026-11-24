@@ -220,6 +220,8 @@
     .rod-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 28px; font-size: 0.9rem; font-weight: 600; }
     .rod-links a { text-decoration: none; color: var(--navy); }
     .copy { font-size: 0.82rem; color: var(--soft); }
+    .creditos { margin-top: -14px; }
+    .creditos a { color: inherit; font-weight: 600; text-underline-offset: 3px; }
     @media (hover: hover) and (pointer: fine) { .rod-links a:hover { color: var(--green); text-decoration: underline; text-underline-offset: 4px; } }
 
     /* diagnóstico */

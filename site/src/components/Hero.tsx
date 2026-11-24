@@ -4,7 +4,7 @@ import { Icon, type NomeIcone } from './Icon';
 const DESTAQUES: [NomeIcone, string][] = [
   ['escudo', 'Mais saúde e segurança'],
   ['gota', 'Sem cor, cheiro ou gosto ruim'],
-  ['casa', 'Soluções para residências e poços'],
+  ['casa', 'Soluções inteligentes no tratamento de água de poço, cacimbas, tanques, rios e etc…'],
   ['ondas', 'Conforto e qualidade de vida'],
 ];
 

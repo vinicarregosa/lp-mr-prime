@@ -33,7 +33,7 @@ export function Sobre() {
                 <li key={t}><Icon nome={ic} /><span>{t}</span></li>
               ))}
             </ul>
-            <p className="nota"><Icon nome="ondas" /> <span>Além dos filtros, vendemos <b>ionizadores solares para piscina</b> e damos <b>manutenção em vários tipos de equipamentos do mercado</b>.</span></p>
+            <p className="nota"><Icon nome="ondas" /> <span>Além dos filtros que comercializamos, damos <b>manutenção em todos os tipos de equipamento do mercado</b>.</span></p>
           </div>
         </div>
 

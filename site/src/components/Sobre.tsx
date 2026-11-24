@@ -23,7 +23,7 @@ export function Sobre() {
         <div>
           <FxUp as="p" className="tag">Sobre nós</FxUp>
           <FxUp as="h2" atraso={60}><span id="sobre-h">Empresa especializada em tratamento para água de poço residencial, comercial e industrial.</span></FxUp>
-          <FxUp as="p" className="lead" atraso={120}>A MR Água Prime oferece soluções completas em tratamento para águas de poço artesiano, tanques, cacimbas, cisternas, rios, etc. Unimos equipamentos de qualidade, instalação e suporte técnico para entregar água limpa e segura onde você precisa. À frente da empresa está o Mister Prime, e o atendimento é próximo e direto.</FxUp>
+          <FxUp as="p" className="lead" atraso={120}>A MR Água Prime oferece soluções completas em tratamento de águas de poço artesiano, tanques, cacimbas, cisternas, rios, etc. Unimos equipamentos de qualidade, instalação e suporte técnico para entregar água limpa e segura onde você precisa. À frente da empresa está o Mister Prime, e o atendimento é próximo e direto.</FxUp>
 
           <div className="onde">
             <h3>Onde atuamos</h3>

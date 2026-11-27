@@ -8,16 +8,13 @@ const DESTAQUES: [NomeIcone, string][] = [
   ['ondas', 'Conforto e qualidade de vida'],
 ];
 
-/** Hero: foto da casa com aproximação lenta (CSS) e tom azul-marinho por cima. */
+/** Hero: fundo de água com aproximação lenta (CSS) e o filtro MR Água Prime ao lado do texto. */
 export function Hero() {
   return (
     <section className="hero" id="inicio" aria-label="Início">
       <div className="hero-foto" aria-hidden="true">
-        <picture>
-          <source media="(max-width: 899px)" srcSet="/media/hero-casa-m.webp" />
-          {/* React 18 só conhece fetchPriority em minúsculas como atributo HTML */}
-          <img src="/media/hero-casa.webp" alt="" width={2400} height={1018} {...{ fetchpriority: 'high' }} decoding="async" />
-        </picture>
+        {/* React 18 só conhece fetchPriority em minúsculas como atributo HTML */}
+        <img src="/media/hero-agua.webp" alt="" width={1000} height={958} {...{ fetchpriority: 'high' }} decoding="async" />
       </div>
 
       <p className="hero-frase" aria-hidden="true">Água pura<br />de verdade!</p>
@@ -31,6 +28,10 @@ export function Hero() {
             <a className="btn" href={ZAP_ORCAMENTO} target="_blank" rel="noopener">Solicitar orçamento</a>
             <a className="btn btn-vidro" href="#filtros">Ver modelos</a>
           </div>
+        </div>
+
+        <div className="hero-filtro" aria-hidden="true">
+          <img src="/media/hero-filtro.webp" alt="" width={602} height={1158} decoding="async" />
         </div>
 
         <ul className="chips">

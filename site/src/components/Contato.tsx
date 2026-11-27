@@ -8,8 +8,8 @@ const SELOS = ['Residências e condomínios', 'Água de poço', 'Instalação es
 export function Contato() {
   return (
     <section className="sec sec-contato" id="contato" aria-labelledby="contato-h">
-      <div className="wrap">
-        <FxUp className="cta">
+      <FxUp className="cta">
+        <div className="wrap cta-in">
           <div className="cta-txt">
             <h2 id="contato-h">Fale com o Mister Prime</h2>
             <p className="lead">Solicite um orçamento sem compromisso e fale agora mesmo com a nossa equipe técnica.</p>
@@ -26,8 +26,10 @@ export function Contato() {
             <p><Icon nome="pino" /> Atendemos Sergipe, Alagoas, Bahia e Pernambuco, com bases em Aracaju e Maceió.</p>
             <p><Icon nome="ig" /> Siga-nos {INSTAGRAM_USER}</p>
           </div>
-        </FxUp>
+        </div>
+      </FxUp>
 
+      <div className="wrap">
         <footer className="rodape">
           <a className="marca marca-esc" href="#inicio" aria-label="MR Água Prime, início">
             <img src="/media/logo-mr.png" alt="" width={254} height={304} />

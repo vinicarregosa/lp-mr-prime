@@ -1,3 +1,4 @@
+import { Atuacao } from './components/Atuacao';
 import { AntesDepois } from './components/AntesDepois';
 import { Bar } from './components/Bar';
 import { Contato } from './components/Contato';
@@ -16,6 +17,7 @@ export default function App() {
       <Bar />
       <main>
         <Hero />
+        <Atuacao />
         <Sobre />
         <AntesDepois />
         <Filtros />
